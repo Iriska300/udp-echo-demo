@@ -10,6 +10,14 @@ services:
     cpus: '0.5'
     restart: unless-stopped
 
+  echo-client:
+    build: ./client
+    container_name: udp-echo-client
+    networks:
+      - vran-network
+    stdin_open: true
+    tty: true
+
 networks:
   vran-network:
     driver: bridge
