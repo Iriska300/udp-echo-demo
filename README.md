@@ -1,4 +1,7 @@
 # UDP Echo Demo for K3s
+## Готовые образы на Docker Hub
+- **Сервер:** [`iriska2604/udp-echo-server:latest`](https://hub.docker.com/r/iriska2604/udp-echo-server)
+- **Клиент:** [`iriska2604/udp-echo-client:latest`](https://hub.docker.com/r/iriska2604/udp-echo-client)
 
 UDP-эхо-сервер и клиент на C++ для развертывания в K3s. Клиент отправляет "ping", сервер возвращает "ping" — режим "пинг-понг".
 
