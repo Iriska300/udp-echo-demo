@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: udp-echo-client
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: udp-echo-client
+  template:
+    metadata:
+      labels:
+        app: udp-echo-client
+    spec:
+      containers:
+        - name: echo-client
+          image: udp-echo-client:latest
+          imagePullPolicy: IfNotPresent
